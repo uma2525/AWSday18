@@ -1,0 +1,239 @@
+AWS Bigdata
+Trainer: Prashant Nair
+==============================================================================================
+
+Day1 Agenda
+-----------
+
+Course Introduction
+Revisiting Cloud Computing ----------------------- (Azure Day1 Notepad)
+Revisiting Bigdata ------------------------------- (Bigdata Day1 Notepad)
+Bigdata Project Phases --------------------------- (Bigdata Day1 Notepad)
+Introducing the World oF AWS
+AWS Bigdata Components in Brief
+Lab Introduction
+AWS Basics and Pre-req for Lab Practice
+
+
+
+Cloud computing ---- Its all about delivering IT or IT-related services over the Internet using pay per usage model
+
+Cloud Service models:
+
+	a. Infrastructure As A Service
+	b. Platform As A Service	
+	c. Software As A Service
+
+Cloud Delivery models:
+	
+	a. Private Cloud
+	b. Public Cloud
+	c. Community Cloud
+	d. Hybrid Cloud
+
+
+Bigdata Project Phases:
+	
+	a. Data Acquisition Phase
+	b. Data Preprocessing Phase
+	c. Data Transformation Phase
+	d. Data View Phase
+	e. BI/AI/Intelligence Phase
+
+
+
+
+
+
+
+
+
+
+AWS Bigdata Engineering Course (AWS Certified Data Analytics - Specialty) (DAS-C01)
+============================================================================
+
+
+1. Collection
+	a. AWS Kinesis (Firehose | Data Streams) (Theory + Hands-on)
+	b. AWS Snowball (Theory)
+	c. AWS DMS (Theory)
+	d. AWS Direct Connect
+	e. AWS SQS
+
+2. Storage
+	a. S3 + Glacier in Detail (Theory + Hands-on)
+	b. DynamoDB (Theory + Basic Hands-on)
+
+3. Processing
+	a. AWS Lambda (Theory + Basic Hands-on)
+	b. AWS Glue (Theory + Basic Hands-on)
+	c. AWS EMR (Theory + Basic Hands-on)
+	d. AWS Sagemaker (Theory + Basic Hands-on)
+
+4. Analysis
+	a. AWS Athena (Theory + Basic Hands-on)
+	b. AWS Redshift (Theory + Basic Hands-on)
+	c. AWS Kinesis Data Analytics (Theory)
+
+5. Visualization (Theory)
+	a. Amazon QuickSight
+
+6. Data Security (Theory)
+
+
+
+
+Pre-requisites:
+===============
+
+Lab1: Create a Virtual machine
+
+
+
+1. Type ec2 on search box and go to the dashboard'
+2. Click on Launch Instance > Launch Instance > Amazon Linux 2 AMI (HVM), SSD Volume Type > t2.micro > Launch > Create a new Key Pair (Download the KeyPair and Save it to reuse the same for connecting to the machine) > Launch Instance
+3. Go to EC2 Dashboard > Instances . Ensure the instance is in running state and then select the instance and click on Connect > EC Instant Connect.
+
+
+Lab2: Accessing VM
+
+Download putty.zip from GDrive
+
+For Windows Users:
+
+1. Convert pem key file into ppk key file. This can be done using PUTTYGEN.exe
+
+2. OPen Putty.exe and Copy paste the hostname in the Host Name
+
+3. On the left hand side menu, click SSH > Auth.  and set the private key 
+
+4. Click on Connect
+
+5. Username: ec2-user
+
+
+
+IAM (Identity Access Management)
+=================================
+
+This allows the user to provide access rights to all the objects created in AWS.
+
+
+Demo: Giving administrator access to the VM to access all services in AWS.
+
+Lab 3: How to create security roles for any AWS object?
+
+IAM -- Identity Access Management
+
+This service in AWS allows admins or users to create a new role or to create access token.
+
+Example: We are going give our AWS instance administrator rights to access and control any AWS service in my account.
+
+
+1. Go to IAM dashboard
+2. On the left hand side menu, click on Access Management > Roles
+3. Click on Create Role
+4. Select EC2 and click on Next:Permissions
+5. Attach the following policies:
+	AdministratorAccess
+6. Click on Next > Next > Give a name to the role named 'ec2-admin' and ensure policy is attached and click on Create role
+
+7. Ensure the role is listed on the table.
+
+
+Lab 4: How to attach the role in the object?
+
+1. Go to the appropriate service (EC2 dashboard)
+2. Select the machine on which the role is to be attached
+3. Click on Actions > Security > Modify IAM role > Select the role > Save
+
+
+
+Lab 5: How to use S3 to store data?
+
+Amazon Simple Storage Service ----> Similar to GDrive but you can have a raw storage or you can have a shared storage
+
+Bucket -----> Main Folder in S3
+Objects ----> Sub Folder in the main folder or File in S3 bucket
+
+
+1. Go to S3 dashboard
+2. Create a bucket named dataset64675
+3. Try creating a folder named transactions
+4. Try Uploading a file.
+	
+
+
+
+Assignment 1
+-------------
+
+Create a VM with t2.micro instance template. Ensure the following
+
+	a. Recreate a new key
+	b. Convert the key to private key compatible for putty
+	c. Convert the key to private key compatible for Winscp
+	d. Access the machine using Putty and WinSCP and load data using WinSCP
+	e. Ensure you attach Adminsitrator role to the VM.
+
+
+30 mins( Will resume our discussion by 11:25am IST)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
